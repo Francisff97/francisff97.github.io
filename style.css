@@ -87,3 +87,6 @@ width: 45%;
     margin: 10px 0;
     font-size: 18px;
 }
+@media screen and (max-width: 478px){
+    .contenitoreBox{
+        width: 50%;
