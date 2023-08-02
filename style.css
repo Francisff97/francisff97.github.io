@@ -89,5 +89,5 @@ width: 45%;
 }
 @media screen and (max-width: 478px){
     .contenitoreBox{
-        width: 50%;
+        width: 50% !important;
     }
