@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html lang="it" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-
-    <title>Convertitore e21</title>
-  </head>
-  <body>
-    <div class="sfondo">
+</head>
+<body>
     <div class="contenitore">
-      <img src="img/logo.svg" width="250px"></img>
-    <h1 class="titolo">Convertitore e21</h1>
-    <legend>Inserisci il numero in Virtual pixel che vedi nel font di Adobe XD per ottenere la conversione in PX ed EM</legend>
+        <div class="interno">
+            <h1 class="titolo">Counter?</h1>
+            <div class="flex">
+                <div class="contenitoreBox">
+                    <div class="numero_oggi lol" id="oggi">0</div>
+                    <div class="scritta">Oggi</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="numero_ieri lol" id="ieri">0</div>
+                    <div class="scritta">Ieri</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="numero_settimana lol" id="settimana">0</div>
+                    <div class="scritta">Settimana</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="numero_mese lol" id="mese">0</div>
+                    <div class="scritta">Mese</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="mese_scorso lol" id="mese_scorso">0</div>
+                    <div class="scritta">Mese scorso</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="ultimi_tre_mesi lol" id="tre_mesi">0</div>
+                    <div class="scritta">Tre mesi</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="sei_mesi lol" id="sei_mesi">0</div>
+                    <div class="scritta">Sei mesi</div>
+                </div>
+                <div class="contenitoreBox">
+                    <div class="anno lol" id="anno">0</div>
+                    <div class="scritta">Anno</div>
+                </div>
+            </div>
+        </div>
+        <div class="campi">
+            <h2 class="titolo2">Scegli quale valore implementare</h2>
+            <form id="modulo">
+                <select name="campo da incrementare" id="campo" form="modulo">
+                    <option value="Oggi" id="1">Oggi</option>
+                    <option value="Ieri" id="2">Ieri</option>
+                    <option value="Settimana scorsa" id="3">Settimana scorsa</option>
+                    <option value="Questo mese" id="4">Questo mese</option>
+                    <option value="Mese scorso" id="5">Mese scorso</option>
+                    <option value="Tre mesi fa" id="6">Tre mesi fa</option>
+                    <option value="Sei mesi fa" id="7">Sei mesi fa</option>
+                    <option value="Anno" id="8">Anno</option>
+                </select>
+                <input type="number" placeholder="Di quanto vuoi implementare?" id="numero">
+                <button onclick ="incrementa(), incrementa2(), incrementa3(), incrementa4(), incrementa5(), incrementa6(), incrementa7(), incrementa8()" type="button" id="pulsante">Incrementa</button>
+            </form>
+        </div>
     </div>
-    <input class="campo" type="text" id="nIniziale" placeholder="Inserisci il valore in Virtual Pixel(numero che trovi in XD)"></input>
-    <div class="contenitore2">
-    <input class="campo" type="text" id="px" placeholder=" Risultato in Pixel"></input><br><br>
-    <input class="campo" type="text" id="em" placeholder="Risultato in Em"></input>
-    </div><br><br>
-    <button class="pulsante" type="submit" name="button" id="conv">Converti</button>
-</div>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>

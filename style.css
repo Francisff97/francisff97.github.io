@@ -1,73 +1,89 @@
-html{
-  font-family: 'Lato', sans-serif;
-}
-body{
-  margin: auto;
-  padding: 0;
- font-size: 16px;
- overflow: hidden;
-}
-.sfondo{
-  height: 100vh;
-  background-image:url('img/background.jpg');
-  background-size:cover;
-  background-repeat: no-repeat;
-  padding: 150px;
-  vertical-align: middle;
-  margin: auto;
+body, *{
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
 }
 .contenitore{
-  margin: auto;
-  padding: 20px 0;
+    width: 100vw;
+    height: 100vh; 
+    /*background: linear-gradient(#000,#ccc);*/
+    padding: 50px;
+    text-align: center;
+}
+.interno{
+    width: 100%;
 }
 .titolo{
-  font-size: 3rem;
-  font-weight: 800;
-  font-family: 'Lato', sans-serif;
-  color: #000;
+    color: #fff;
+    font-size: 35px;
+    padding: 15px;
 }
-legend{
-  font-size: 1.125rem;
-  color: #000;
-
+.flex{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
-.contenitore2{
-  width: 100%;
-  height: auto;
-  display: flex;
-
+.contenitoreBox{
+    width: 23%; 
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    
 }
-.campo{
-  width: 45%;
-  height: 50px;
-  color: #000;
-  font-family: 'Lato', sans-serif;
-  border: none;
-  box-shadow: 1px 5px 20px #00000029;
-  margin: 20px 20px 20px 0;
-  padding: 10px;
-  border-radius: 15px;
-}
-.pulsante{
-  padding: 20px 80px;
-  background-color: red;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-}
-.pulsante:hover{
-  background-color: green;
-}
-
-@media screen and (max-width: 1024px){
-  .sfondo{
-    padding: 25px;
-    padding-right: 50px !important;
-  }
-  .campo{
+.campi{
     width: 100%;
-  }
-  .contenitore2{
-    display:block;
-  }
+    display: flex; 
+    flex-direction: column;
+    padding-top: 100px;
+}
+.titolo2{
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+}
+#campo{
+    width: 45%; 
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  appearance:none;
+  -webkit-appearance:none;
+  padding:10px;
+  border:none;
+  background-color:#ffffff;
+  color:#000;
+  font-weight:600;
+  border-radius:5px;
+  margin: 10px;
+  height: 60px;
+  
+}
+#numero{
+width: 45%; 
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  appearance:none;
+  -webkit-appearance:none;
+  padding:10px;
+  border:none;
+  background-color:#ffffff;
+  color:#000;
+  font-weight:600;
+  border-radius:5px;
+  margin: 10px;
+  height: 60px;
+}
+#pulsante{
+    appearance:none;
+    -webkit-appearance:none;
+    padding:15px;
+    border:none;
+    background-color:#b53f3f;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:50%;
+    margin: 10px 0;
+    font-size: 18px;
 }
