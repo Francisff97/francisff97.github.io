@@ -1,97 +1,70 @@
-body, *{
-    margin: 0; 
-    padding: 0; 
-    box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    
 }
 .contenitore{
-    width: 100vw;
-    height: 100vh; 
-    /*background: linear-gradient(#000,#ccc);*/
-    padding: 50px;
-    text-align: center;
-}
-.interno{
     width: 100%;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ height:100dvh;
+ text-align: center;
+ background-image: url('https://design4users.com/wp-content/uploads/2020/12/christmas-santa-illustration.png');
 }
-.titolo{
-    color: #000;
-    font-size: 35px;
-    padding: 15px;
-}
-.flex{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-}
-.contenitoreBox{
-    width: 23%; 
-    background-color: #f6f6f6;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 10px;
-    
-}
-.campi{
-    width: 100%;
-    display: flex; 
+.cont2{
+    display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #00000050;
 }
-.titolo2{
-    font-size: 25px;
+.contTempo{
+    margin-top:50px;
+    max-width: 1200px;
+    display: flex;
+flex-direction: row;
+vertical-align: middle;
+}
+.rettangolo{
+    width: 25%;
+    margin-right: 10px;
+    background-color: #0000007a;
+    padding: 20px 50px;
+    border-radius: 20px;
     text-align: center;
-    padding: 15px;
 }
-#campo{
-    width: 45%; 
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  appearance:none;
-  -webkit-appearance:none;
-  padding:10px;
-  border:none;
-  background-color:#ffffff;
-  color:#000;
-  font-weight:600;
-  border-radius:5px;
-  margin: 10px;
-  height: 60px;
-  
+.paragrafo{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
 }
-#numero{
-width: 45%; 
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  appearance:none;
-  -webkit-appearance:none;
-  padding:10px;
-  border:none;
-  background-color:#ffffff;
-  color:#000;
-  font-weight:600;
-  border-radius:5px;
-  margin: 10px;
-  height: 60px;
+h2{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
 }
-#pulsante{
-    appearance:none;
-    -webkit-appearance:none;
-    padding:15px;
-    border:none;
-    background-color:#b53f3f;
-    color:#fff;
-    font-weight:600;
-    border-radius:5px;
-    width:50%;
-    margin: 10px 0;
-    font-size: 18px;
+p{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-family: "Dancing Script", cursive;
 }
-@media screen and (max-width: 1024px){
-    .contenitoreBox{
-        width: 45%;
-    }
-    #campo, #numero{
+@media screen and (max-width: 767px){
+    .contTempo{
+        flex-wrap: wrap;
+        flex-direction: row;
         width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .rettangolo{
+        width: 40%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    p{
+        font-size: 1.875rem;
     }
 }

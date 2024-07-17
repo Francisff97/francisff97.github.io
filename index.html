@@ -1,69 +1,58 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="contenitore">
-        <div class="interno">
-            <h1 class="titolo">Quante volte esce Luca dall'ufficio al giorno?</h1>
-            <div class="flex">
-                <div class="contenitoreBox">
-                    <div class="numero_oggi lol" id="oggi">0</div>
-                    <div class="scritta">Oggi</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="numero_ieri lol" id="ieri">0</div>
-                    <div class="scritta">Ieri</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="numero_settimana lol" id="settimana">0</div>
-                    <div class="scritta">Settimana</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="numero_mese lol" id="mese">0</div>
-                    <div class="scritta">Mese</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="mese_scorso lol" id="mese_scorso">0</div>
-                    <div class="scritta">Mese scorso</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="ultimi_tre_mesi lol" id="tre_mesi">0</div>
-                    <div class="scritta">Tre mesi</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="sei_mesi lol" id="sei_mesi">0</div>
-                    <div class="scritta">Sei mesi</div>
-                </div>
-                <div class="contenitoreBox">
-                    <div class="anno lol" id="anno">0</div>
-                    <div class="scritta">Anno</div>
-                </div>
+<!-- Display the countdown timer in an element -->
+<link rel="stylesheet" href="style.css">
+<div class="contenitore">
+    <div class="cont2">
+        <h2>Quanto manca a Natale?</h2>
+        <span class="paragrafo">
+            Scopri quanti giorni mancano a Natale!
+        </span>
+        <div class="contTempo">
+            <div class="rettangolo">
+                <p id="giorni"></p>
+            </div>
+            <div class="rettangolo">
+                <p id="ore"></p>
+            </div>
+            <div class="rettangolo">
+                <p id="minuti"></p>
+            </div>
+            <div class="rettangolo">
+                <p id="secondi"></p>
             </div>
         </div>
-        <div class="campi">
-            <h2 class="titolo2">Scegli quale valore implementare</h2>
-            <form id="modulo">
-                <select name="campo da incrementare" id="campo" form="modulo">
-                    <option value="Oggi" id="1">Oggi</option>
-                    <option value="Ieri" id="2">Ieri</option>
-                    <option value="Settimana scorsa" id="3">Settimana scorsa</option>
-                    <option value="Questo mese" id="4">Questo mese</option>
-                    <option value="Mese scorso" id="5">Mese scorso</option>
-                    <option value="Tre mesi fa" id="6">Tre mesi fa</option>
-                    <option value="Sei mesi fa" id="7">Sei mesi fa</option>
-                    <option value="Anno" id="8">Anno</option>
-                </select>
-                <input type="number" placeholder="Di quanto vuoi implementare?" id="numero">
-                <button onclick ="incrementa(), incrementa2(), incrementa3(), incrementa4(), incrementa5(), incrementa6(), incrementa7(), incrementa8()" type="button" id="pulsante">Incrementa</button>
-            </form>
-        </div>
     </div>
-<script src="script.js"></script>
-</body>
-</html>
+</div>
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 25, 2024 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("giorni").innerHTML = days + "g ";
+  document.getElementById("ore").innerHTML = hours + "o ";
+  document.getElementById("minuti").innerHTML = minutes + "m ";
+  document.getElementById("secondi").innerHTML = seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
